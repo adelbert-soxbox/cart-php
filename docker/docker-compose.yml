@@ -5,7 +5,7 @@ services:
     env_file:
       - dev.env
     ports:
-      - "80:80"
+      - "8082:80"
       - "3306:3306"
     volumes:
       - ..:/app
