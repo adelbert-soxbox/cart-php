@@ -1,0 +1,11 @@
+version: "2"
+services:
+  fbmcart:
+    build: .
+    #    env_file:
+    #      - dev.env
+    ports:
+      - "8084:80"
+      - "3306:3306"
+    volumes:
+      - ..:/app
