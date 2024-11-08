@@ -39,5 +39,5 @@ RUN mkdir -p /import && chown soxbox:staff /import && ln -s /import /var/www/imp
 
 VOLUME ["/app"]
 
-EXPOSE 80 3306
+# EXPOSE 80 3306
 CMD ["/usr/local/bin/run"]
