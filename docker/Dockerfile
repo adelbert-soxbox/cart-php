@@ -1,26 +1,25 @@
 FROM ubuntu:14.04
-MAINTAINER Sox Box <tim@soxbox.co>
 
 RUN apt-get update && \
-    apt-get install -y \
-      apache2 \
-      php5 \
-      php5-cli \
-      libapache2-mod-php5 \
-      php5-curl \
-      php5-gd \
-      php5-ldap \
-      php5-mysql \
-      php5-pgsql \
-      php5-mcrypt \
-      php5-common \
-      php5-dev \
-      php5-xmlrpc \
-      php5-xsl \
-      php5-sqlite \
-      mysql-server \
-      mysql-client \
-      ssh
+  apt-get install -y \
+  apache2 \
+  php5 \
+  php5-cli \
+  libapache2-mod-php5 \
+  php5-curl \
+  php5-gd \
+  php5-ldap \
+  php5-mysql \
+  php5-pgsql \
+  php5-mcrypt \
+  php5-common \
+  php5-dev \
+  php5-xmlrpc \
+  php5-xsl \
+  php5-sqlite \
+  mysql-server \
+  mysql-client \
+  ssh
 
 
 COPY apache_default /etc/apache2/sites-enabled/000-default.conf
