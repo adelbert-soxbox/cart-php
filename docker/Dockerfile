@@ -1,8 +1,30 @@
-FROM nimmis/apache-php5
+FROM ubuntu:14.04
 
-COPY apache_default /etc/apache2/sites-enabled/000-default.conf
-COPY envvars /etc/apache2/envvars
-COPY run /usr/local/bin/run
+RUN apt-get update && \
+  apt-get install -y \
+  apache2 \
+  php5 \
+  php5-cli \
+  libapache2-mod-php5 \
+  php5-curl \
+  php5-gd \
+  php5-ldap \
+  php5-mysql \
+  php5-pgsql \
+  php5-mcrypt \
+  php5-common \
+  php5-dev \
+  php5-xmlrpc \
+  php5-xsl \
+  php5-sqlite \
+  mysql-server \
+  mysql-client \
+  ssh
+
+
+COPY docker/apache_default /etc/apache2/sites-enabled/000-default.conf
+COPY docker/envvars /etc/apache2/envvars
+COPY docker/run /usr/local/bin/run
 # COPY my.cnf /etc/mysql/conf.d/my.cnf
 
 RUN chmod +x /usr/local/bin/run
