@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+COPY . /var/www/soxbox/
+
 RUN apt-get update && \
   apt-get install -y \
   apache2 \
