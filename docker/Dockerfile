@@ -2,7 +2,7 @@ FROM nimmis/apache-php5
 
 COPY apache_default /etc/apache2/sites-enabled/000-default.conf
 COPY envvars /etc/apache2/envvars
-COPY ./run /usr/local/bin/run
+COPY run /usr/local/bin/run
 # COPY my.cnf /etc/mysql/conf.d/my.cnf
 
 RUN chmod +x /usr/local/bin/run
