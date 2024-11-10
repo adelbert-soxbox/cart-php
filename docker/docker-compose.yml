@@ -3,7 +3,7 @@ services:
   fbmcart:
     build: .
     env_file:
-      - dev.env
+     - dev.env
     ports:
       - "8082:80"
       - "3306:3306"
